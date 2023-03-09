@@ -1,0 +1,27 @@
+package sample;
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Enter your name: ");
+    String name = input.nextLine();
+
+    System.out.print("Enter number of items: ");
+    int numItems = input.nextInt();
+
+    System.out.print("Enter discount value: ");
+    double discount = input.nextDouble();
+
+    System.out.print("Enter price for each item: ");
+    double price = input.nextDouble();
+
+    double total = numItems * price;
+    double discountAmount = total * discount;
+    double amountToPay = total - discountAmount;
+
+    System.out.println(name + " will Pay " + amountToPay + " with discount of " + discountAmount);
+  }
+}
